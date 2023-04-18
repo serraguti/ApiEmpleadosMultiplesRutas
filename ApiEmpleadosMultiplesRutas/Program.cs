@@ -19,7 +19,8 @@ builder.Services.AddSwaggerGen(options =>
     options.SwaggerDoc("v1", new OpenApiInfo
     {
         Title = "Api Empleados Múltiples rutas",
-        Description = "Ejemplo con múltiples métodos GET y Route"
+        Description = "Ejemplo con múltiples métodos GET y Route",
+        Version = "v1"
     });
 });
 
@@ -28,7 +29,7 @@ app.UseSwagger();
 app.UseSwaggerUI(options =>
 {
     options.SwaggerEndpoint(url: "/swagger/v1/swagger.json"
-        , name: "Api Empleados v1");
+        , name: "Api Empleados v1 Management");
     options.RoutePrefix = "";
 });
 // Configure the HTTP request pipeline.
